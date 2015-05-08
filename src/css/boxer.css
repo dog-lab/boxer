@@ -1,0 +1,68 @@
+.bxr-ok {
+  box-shadow: 0.5em 0.5em 1em hsl(0, 0%, 25%);
+  padding: 0.5em 1.5em;
+}
+
+.bxr-ok:active {
+  box-shadow: none;
+}
+
+.bxr-hidden-control {
+  display: none;
+}
+
+input[type='button'].bxr-ok-control {
+  background-color: hsl(0, 0%, 85%);
+  border: 0.1em outset hsl(0, 0%, 95%);
+  border-radius: 0.25em;
+  box-shadow: 0.25em 0.25em 0.5em hsl(0, 0%, 15%);
+  color: hsl(0, 0%, 15%);
+  font-size: 0.85em;
+  font-weight: bold;
+  outline: none;
+  padding: 0.5em 1.5em;
+}
+
+.bxr-ok-control:active {
+  box-shadow: none;
+}
+
+.bxr-ok-wrapper {
+  display: none;
+  text-align: center;
+  width: 100%;
+}
+
+.bxr-dialog {
+  background: hsl(0, 0%, 33%);
+  border: 0.15em ridge hsl(0, 0%, 65%);
+  border-radius: 0.5em;
+  box-shadow: 0.25em 0.25em 1em hsl(0, 0%, 33%);
+  color: hsl(0, 0%, 100%);
+  min-width: 18em;
+  padding: 1em;
+  z-index: 100;
+}
+
+input[name^='bxr-type'][value='error']:checked ~ .bxr-dialog {
+  border-left: 1em solid hsl(0, 50%, 50%);
+}
+
+input[name^='bxr-type'][value='info']:checked ~ .bxr-dialog {
+  border-left: 1em solid hsl(210, 50%, 50%);
+}
+
+input[name^='bxr-type'][value='none']:checked ~ .bxr-dialog {
+  border-left: 0.15em ridge hsl(0, 0%, 65%);
+}
+
+input[name^='bxr-type'][value='ok']:checked ~ .bxr-dialog {
+  border-left: 1em solid hsl(120, 50%, 50%);
+}
+
+.bxr-wrapper {
+  font-size: 0.85em;
+  display: none;
+  position: absolute;
+  z-index: 100;
+}
